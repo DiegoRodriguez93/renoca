@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .work-parent{
+    min-height: 850px;
+    background: rgb(239, 242, 243);
+  }
+  
+  
+  #work {
+
+     position: absolute!important;
+    overflow: hidden!important;
+    width: 100%!important;
+    height: 100%!important;
+    user-select: none;
+/*     z-index: 999999; */
+  }
+  
+  #work > div {
+    position: absolute!important;
+    width: 100vw!important;
+    height: auto!important;
+    will-change: transform!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+  }
+  
+  #work > div > div {
+/*     background-color: white!important; */
+/* background-image: url("https://renoca.ml/img/cellbg.png")!important; */
+/* background-image: url(https://renoca.ml/img/cellbg.jpg); */
+    background-size:100%, auto 85%!important;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+    width: 45vh!important;
+    max-width: 300px!important;
+    height: 85vh!important;
+    max-height: 570px!important;
+    will-change: transform!important;
+    border-radius: 10px!important;
+    box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  }
+  .cards:hover{
+      cursor: move; /* fallback if grab cursor is unsupported */
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+  }
+  
+  .cards:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+  }
+
+  #stack {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+  }
+  
+  #stack {
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    background: #f0f0f0;
+    padding-bottom: 45px;
+  }
+  
+  .list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .list > div {
+    position: absolute;
+    will-change: transform, width, height, opacity;
+    padding: 25px;
+  }
+  
+  .list > div > div {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    max-width: 350px!important;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
+  }

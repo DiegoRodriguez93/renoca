@@ -1,43 +1,986 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133922874-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  gtag('config', 'UA-133922874-3');
+</script>
+ <style>
+   #hidee{
+  display: none;
+}
+    .newbox{
+      /* width: 30%; 
+       margin-left: 3%; */
+       margin-top: 45px;
+      }
+      .newbox:hover{
+        transition:filter .1s ease-in;
+        filter: opacity(.9);
+        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.7);
+      } 
+hr.altabarra {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #007BFF;
+    color: #007BFF;
+    text-align: center;
+}
+hr.altabarra:after {
+    content: "<DR>";
+    display: inline-block;
+    position: relative;
+    top: -0.9em;
+    font-size: 1.4em;
+    padding: 0 0.25em;
+    background: white;
+  }
+     .auto{
+         margin-left: auto;
+         margin-right: auto;
+         text-align: center;
+         display: block;
+         height: 75%;
+         width: 75%;
+     }.service-box{border-style: groove!important;}
+     
+     @media only screen and (max-width: 720px){
+#hidee{
+  display: none;
+}.newbox{
+  border-style: groove;
+}
+     }
+     
+    </style>
+ 
+  <meta charset="utf-8">
+  <title>Renoca</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Favicons -->
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link href="favicon.ico" rel="icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+</head>
+
+<body id="page-top">
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">Renoca</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Inicio</a>
+          </li>
+<!--           <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">Acerca de</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Portfolio</a>
+          </li>
+          <li class="nav-item" style="display: none">
+            <a class="nav-link js-scroll" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#contact">Contáctame</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Skew Star /-->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/intro.jpg?ver=2.0)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <img src="img/LOGO.png" class="img fluid" height="128px" width="128px">
+          <h1 class="intro-title mb-4">Renoca</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Web Developer,Web Designer,Full stack Developer,Graphic Designer</span><strong class="text-slider"></strong></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+<!--   <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6 my-auto">
+                <div class="row">
+                  <div class="col md-6 lg-12 sm-12">
+                    <div class="about-img">
+                      <img src="img/cv-profile-min.png" height="200px" width="200px" class="img-fluid rounded b-shadow-a " alt="">
+                    </div>
+                  </div>
+                  <div class="col md-6 lg-12 sm-12 my-auto">
+                      <div class="">
+                        <h5>-Desarrollo Web</h5>
+                        <h5>-Servicios de Marketing</h5>
+                        <h5>-Diseñador Gráfico</h5>
+                        <h5>-Diseñador Apps</h5>
+                        <h5>-Edición de video</h5>
+
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Acerca de mi
+                    </h5>
+                  </div>
+                  <p class="lead">
+                  Soy una persona emprendedora, que adora los retos y no se rinde fácilmente.
+                   Muy detallista y autodidacta, nunca dejo de aprender.
+                  </p>
+                  <p class="lead">
+                    Mi objetivo principal es desarrollarme profesionalmente y evolucionar en mi sector,
+                     de modo que busco oportunidades que me permitan hacerlo.
+                  </p>
+                  <p class="lead">
+                    Como persona organizada y con una gran motivación, 
+                    soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto,
+                     al mismo tiempo que me esfuerzo por trabajar en equipo, entender a los clientes y fomentar buenos valores.
+                  </p>
+                </div>
+              </div>
+              <br>
+              
+              
+              
+              <br>
+              </div>
+              <div class="row">
+              <div class="col-md-12 mt-5">
+                <div class="text-center">
+                  <a href="download/cv-min.pdf" class="btn btn-primary btn-lg btn-block">Descargar CV <img src="img/vectorpaint.svg" class="mb-1 ml-2" height="30" width="22"></a>
+                </div>
+              </div>
+              </div>
+
+            
+              <div class="row" id="hidee">
+              <div class="col-md-12 mt-5">
+    
+              <div class="title-box-2 mt-3">
+                    <h2 class="title text-center">
+                      Lenguajes de Programación, etiquetado y diseño.
+                    </h2>
+                  </div></div>
+                  
+                  <div class="row"> 
+              <div class="col-md-2">
+                  <img src="img/html5.png" class="img-fluid auto" alt="">
+              </div>
+              <div class="col-md-2">
+                  <img src="img/css.png" class="img-fluid auto" alt="">
+              </div>
+              <div class="col-md-2">
+                  <img src="img/js.png" class="img-fluid auto" alt="">
+              </div>
+                  <div class="col-md-2">
+                  <img src="img/php.png" class="img-fluid auto" alt="">
+              </div>
+                 <div class="col-md-2">
+                  <img src="img/ts.png" class="img-fluid auto" alt="">
+              </div>
+
+              </div>
+              <br>
+              <br>
+              <br>
+                   <div class="col-md-12 mt-5">
+
+              <div class="title-box-2">
+                    <h2 class="title text-center">
+                      Frameworks de desarrollo y de css
+                    </h2>
+                  </div></div>
+              <div class="row">
+                  
+              
+              <div class="col-md-2">
+                <img src="img/laravel.png" class="img-fluid auto" alt="">
+            </div>
+              <div class="col-md-2">
+                <img src="img/react.png" class="img-fluid auto" alt="">
+            </div>
+              <div class="col-md-2">
+                  <img src="img/bootstrap.jpg" class="img-fluid auto" alt="">
+              </div>
+                  <div class="col-md-2">
+                  <img src="img/materialize.png" class="img-fluid auto" alt="">
+              </div>
+              </div>
+
+  
+
+              
+<div class="col-md-12">
+
+  <div class="title-box-2 mt-5">
+        <h2 class="title text-center">
+          Repositorio de Software
+        </h2>
+      </div></div>
+  <div class="row">
+      
+                   <div class="col-md-3">
+      <img src="img/github.png" class="img-fluid auto" alt="">
+  </div>
+
+  <div class="col-md-3">
+      <img src="img/Git-Icon-1788C.png" class="img-fluid auto" alt="">
+      </div>
+    
+    
+    </div>
+             
+             
+                              <div class="col-md-12">
+
+              <div class="title-box-2 mt-5">
+                    <h2 class="title text-center">
+                     Diseño Gráfico
+                    </h2>
+                  </div></div>
+              <div class="row">
+                  
+                               <div class="col-md-2">
+                  <img src="img/adobe-illustrator-cs6-logo-8B70445E4D-seeklogo.com.png" class="img-fluid auto" alt="">
+              </div>
+                                 <div class="col-md-2">
+                  <img src="img/ps.png" class="img-fluid auto" alt="">
+              </div>
+              <div class="col-md-2">
+                <img src="img/afertereffects.jpg" class="img-fluid auto" alt="">
+            </div>
+                                 <div class="col-md-2">
+                  <img src="img/canva.png" class="img-fluid auto" alt="">
+              </div>
+                                 <div class="col-md-2">
+                  <img src="img/filmora.png" class="img-fluid auto" alt="">
+              </div>
+</div>
+              
+              
+              
+               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!--/ Section Services Star /-->
+  <section id="service" class="services-mf route">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Servicios
+            </h3>
+            <p class="subtitle-a">
+              Breve descripción de los servicios
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Diseño Web</h2>
+              <p class="s-description text-center">
+            Diseño y planificación junto al cliente en todo el proceso, con las adaptaciones y cambios necesarios que surjan.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Desarrollo Web</h2>
+              <p class="s-description text-center">
+                Desarrollo de aplicaciones web siguiendo los estandares mas modernos de diseño y calidad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-android-lock"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Seguridad</h2>
+              <p class="s-description text-center">
+               Aplicaciones protegidas ante ataques Cross Site Scripting(XXS), inyección SQL, inyección de codigo y otros. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Diseño Responsivo</h2>
+              <p class="s-description text-center">
+                Todas nuestras aplicaciones web se ajustan a la resolución en diferentes computadoras, celulares y tablets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-paintbrush"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Diseño Grafico</h2>
+              <p class="s-description text-center">
+               Diseño de logos, banner, imagenes, folletos, videos promocionales, videopresentaciones y muchos mas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-stats-bars"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Marketing Services</h2>
+              <p class="s-description text-center">
+                Servicios de SEO y SEM, posicionamiento web, redacción de artículos a pedido.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Services End /-->
+
+  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg);display:none;">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-lg-4">
+          <div class="counter-box">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">100</p>
+              <span class="counter-text">Satifacción</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">0</p>
+              <span class="counter-text">Atrasos</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-people"></i></span>
+            </div>
+            <div class="counter-num">
+             <p class="counter">8</p>
+              <span class="counter-text">Total de clientes</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--/ Section Portfolio Star /-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Stack
+          </h3>
+          <p class="subtitle-a">
+            Tecnologías que uso cotidianamente
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="stack"></div>
+  <section class="work-parent portfolio-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Portfolio
+            </h3>
+            <p class="subtitle-a">
+              Algunos de los proyecto que he trabajado
+            </p>
+            <div class="line-mf mb-2"></div>
+            <img src="img/move.gif" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="work"></div>
+  </section>
+
+<!--   <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Portfolio
+            </h3>
+            <p class="subtitle-a">
+              Algunos de los trabajos realizados
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+<div class="row">
+        <div class="col-lg-4 md-6 sm-12 newbox">
+          <a href="https://ajedrezlatino.com" target="_blank">
+          <h4 class="text-center text-primary">Diseño Web</h4>
+          <img src="img/ajedrez-latino.png" alt="" class="img-fluid">
+          <div class="mt-4 ml-3">
+            <h5>Ajedrez Latino</h5>
+          <h6>-Template desarrollado en Bootstrap</h6>
+          <h6>-Sistema de usuarios en Laravel</h6>
+          <h6>-Front End hecho con Jquery</h6>
+        </a>
+        </div></div>
+
+        <div class="col-lg-4 md-6 sm-12 newbox">
+            <a href="work/panaderiadonlorenzo" target="_blank">
+            <h4 class="text-center text-primary">Diseño Web</h4>
+            <img src="img/panad.png" alt="" class="img-fluid">
+            <div class="mt-4 ml-3">
+                <h5>Panaderia Don Lorenzo</h5>
+            <h6>-Template desarrollado en Bootstrap</h6>
+            <h6>-Front end con ReactJS</h6>
+          </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 md-6 sm-12 newbox">
+            <a href="https://youtube.com/ajedrezlatino" target="_blank">
+            <h4 class="text-center text-primary">Diseño Gráfico</h4>
+            <img src="img/min-yt.png" alt="" class="img-fluid">
+            <div class="mt-4 ml-3">
+            <h6>-Miniaturas para youtube en Adobe photoshop cc</h6>
+          </a>
+          </div></div>
+
+
+      </div>
+     <div class="row">
+        <div class="col-lg-4 md-6 sm-12 newbox">
+            <a href="https://youtube.com/ajedrezlatino" target="_blank">
+            <h4 class="text-center text-primary">Diseño Gráfico</h4>
+            <img src="img/min-logos.jpg" alt="" class="img-fluid">
+            <div class="mt-4 ml-3">
+            <h6>-Diseño de logos en Adobe Ilustrator</h6>
+          </a>
+          </div></div>
+
+          <div class="col-lg-4 md-6 sm-12 newbox">
+              <a href="https://play.google.com/store/apps/details?id=com.phonegap.medixur&hl=es_419" target="_blank">
+              <h4 class="text-center text-primary">Android Aplication</h4>
+              <div class="text-center">
+                <img src="img/medixur2.webp" height="100" width="150" alt="" class="img-fluid">
+              </div>
+              <div class="mt-4 ml-3">
+              <h6>Ionic/Capacitor</h6>
+            </a>
+            </div></div>
+
+            <div class="col-lg-4 md-6 sm-12 newbox">
+                <a href="work/wallet/" target="_blank">
+                <h4 class="text-center text-primary">Wallet app</h4>
+                <img src="img/wallet.png" alt="" class="img-fluid">
+                <div class="mt-4 ml-3">
+                <h6>-Laravel/Lumen Backend</h6>
+                <h6>-Jquery boostrap Frontend</h6>
+              </a>
+              </div></div>
+
+     </div> -->
+
+      <!-- cajas ina
+      <div class="row">
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/ajedrez-latino.png" data-lightbox="gallery-mf" >
+              
+              <div class="work-img">
+                <img src="img/ajedrez-latino.png" alt="" class="img-fluid">
+              </div></a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <a href="https://ajedrezlatino.com" target="_blank">
+                    <h2 class="w-title">https://ajedrezlatino.com</h2></a>
+                    <div class="w-more">
+                      <span class="w-ctegory">Diseño Web</span> / <span class="w-date">13 de Abril 2019</span>
+                      <div class="mt-2">
+                      <h6>-Template desarrollado en Bootstrap</h6>
+                      <h6>-Sistema de usuarios en Laravel</h6>
+                      <h6>-Jquery</h6>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/panad.png" data-lightbox="gallery-mf" >
+              
+              <div class="work-img">
+                <img src="img/panad.png" alt="" class="img-fluid">
+              </div></a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <a href="https://panaderiadonlorenzo.com" target="_blank">
+                    <h2 class="w-title">https://panaderiadonlorenzo.com</h2></a>
+                    <div class="w-more">
+                      <span class="w-ctegory">Diseño Web</span> / <span class="w-date">10 de Enero 2017</span>
+                      <div class="mt-2">
+                      <h6>-Template desarrollado en Bootstrap</h6>
+                      <h6>-Front end con ReactJS</h6>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/min-yt.png" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/min-yt.png" alt="" class="img-fluid">
+              </div> 
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Miniaturas canal de Youtube </h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Diseño Grafico</span> / <span class="w-date">15 Mayo 2019</span>
+                      <div class="mt-2">
+                        <h6>-Diseñado con adobe photoshop</h6>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                     
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+       --> <!-- 
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-4.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Logos</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Diseño Grafico</span> / <span class="w-date">10 Febrero 2019</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-6.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-6.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Intro videos Youtube</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Edición de Video</span> / <span class="w-date">16 Mayo 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-5.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Ajedrez Latino Android App(Proximamente)</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Desarrollo App</span> / <span class="w-date">16 Mayo 2019</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+      </div>-->
+<!--     </div>
+  </section> -->
+  <!--/ Section Portfolio End /-->
+
+  <section id="blog" class="blog-mf sect-pt4 route mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Blog
+            </h3>
+            <p class="subtitle-a">
+              While(!success){
+                tryAgain();
+                if(success){
+                  improve();
+                }
+              }
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="https://medium.com/@diegorodriguez93/configura-react-con-parcel-en-minutos-d62af9038772" target="_blank"><img src="img/post-1.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">
+                    ReactJS</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://medium.com/@diegorodriguez93/configura-react-con-parcel-en-minutos-d62af9038772" target="_blank">Configura React con Parcel en minutos</a></h3>
+              <p class="card-description">
+                Parcel es un empaquetador de aplicaciones web, que se diferencia por la experiencia ofrecida a los desarrolladores.
+                 Ofrece un rendimiento ultra-rápido, utilizando procesamiento multinúcleo, y no requiere configuración.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="https://medium.com/@diegorodriguez93/configura-react-con-parcel-en-minutos-d62af9038772">
+                  <img src="img/cv-profile-min.png" alt="" class="avatar rounded-circle">
+                  <span class="author">Diego Rodríguez</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 5 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="https://medium.com/@diegorodriguez93/creando-un-custom-hook-con-react-651594031905" target="_blank"><img src="img/post-2.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">ReactJS</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://medium.com/@diegorodriguez93/creando-un-custom-hook-con-react-651594031905" target="_blank">Creando un custom hook con React</a></h3>
+              <p class="card-description">
+                A partir de la versión 16.8 de React los hooks estan aquí y han venido para quedarse,
+                 React ha cambiado su manera de hacer las cosas hoy los hooks son la solución a algunos problemas que teníamos con las clases.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="https://medium.com/@diegorodriguez93/creando-un-custom-hook-con-react-651594031905" target="_blank">
+                  <img src="img/cv-profile-min.png" alt="" class="avatar rounded-circle">
+                  <span class="author">Diego Rodríguez</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 4 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="https://medium.com/@diegorodriguez93/creando-un-formulario-completo-con-react-f%C3%A1cil-r%C3%A1pido-y-profesional-cc90240355dc" target="_blank"><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">ReactJS</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://medium.com/@diegorodriguez93/creando-un-formulario-completo-con-react-f%C3%A1cil-r%C3%A1pido-y-profesional-cc90240355dc" target="_blank">Creando un formulario completo con React fácil,
+                 rápido y profesional.</a></h3>
+              <p class="card-description">
+                  Muchas veces cuando programamos webs tenemos la necesidad de integrar mucho formularios,
+                   en los cuales hay que hacer validaciones, devolver errores etc.                            
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="https://medium.com/@diegorodriguez93/creando-un-formulario-completo-con-react-f%C3%A1cil-r%C3%A1pido-y-profesional-cc90240355dc" target="_blank">
+                  <img src="img/cv-profile-min.png" alt="" class="avatar rounded-circle">
+                  <span class="author">Diego Rodríguez</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 6 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" id="contact" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Envíame un Mensaje:
+                    </h5>
+                  </div>
+                  <div>
+                      <form id="form" class="contactForm">
+                      <div id="response"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" required class="form-control" id="name" placeholder="Tu nombre*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" required name="email" id="email" placeholder="Tu email*" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" required name="msg" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje*"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                          <button type="submit" class="button button-a button-big button-rouded ">Enviar Mensaje</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Contáctame
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      Diseño y desarrollo de aplicaciones,
+                       brindando apoyo en la definición del modelo de negocio y las estrategias de monetización de cada App.
+                    </p>
+                    <ul class="list-ico">
+                      <li><span class="ion-ios-location"></span> Montevideo, Uruguay</li>
+                      <li><span class="ion-ios-telephone"></span> (598) 99 027 591</li>
+                      <li><span class="ion-ios-telephone"></span> (598) 91 987 142</li>
+                      <li><span class="ion-email"></span> info@renoca.ml </li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://www.linkedin.com/in/diego-rodriguez-paiva-b306aa170/" target="_blank"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="https://github.com/diegorodriguez93" target="_blank"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                     <!-- <li><a href=""><span class="ico-circle"><i class="ion-social-taringa"></i></span></a></li>
+                      <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+<br>
+<br>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script>
+  $(document).on('ready',function(){
+
+
+  $('#form').on('submit',function(event){
+    event.preventDefault();
+  $.post('php/form.php',$('#form').serialize(),function(success){
+  $('#response').html(success); 
+  $('#form').trigger('reset');
+  });
+  });
+  });
+  </script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
 </html>

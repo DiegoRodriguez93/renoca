@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}:443%{REQUEST_URI}
+
+Options -Indexes
